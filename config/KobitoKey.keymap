@@ -20,40 +20,40 @@
 
         default_layer {
             bindings = <
-&kp Q          &kp W          &kp E       &kp R          &kp T        &kp Y        &kp U          &kp I          &kp O           &kp P
-&kp A          &kp S          &kp D       &kp F          &kp G        &kp H        &kp J          &kp K          &kp L           &kp SEMI
-&kp Z          &kp X          &kp C       &kp V          &kp B        &kp N        &kp M          &kp COMMA      &kp DOT         &kp APOS
-&mt LSHFT ESC  &mt LCTRL TAB  &kp LALT    &lt 1 SPACE    &lt 2 INT5   &lt 2 INT4   &lt 1 RETURN   &kp BSPC       &mt LCTRL INS   &mt RSHFT DEL
+&kp Q          &kp W          &kp E          &kp R        &kp T        &kp Y        &kp U        &kp I          &kp O           &kp P
+&kp A          &kp S          &kp D          &kp F        &kp G        &kp H        &kp J        &kp K          &kp L           &kp MINUS
+&kp Z          &kp X          &kp C          &kp V        &kp B        &kp N        &kp M        &kp COMMA      &kp DOT         &kp SLASH
+&mt LSHFT ESC  &mt LCTRL TAB  &mt LALT LGUI  &lt 1 SPACE  &lt 2 INT5   &lt 2 INT4   &lt 1 RETURN &mt RALT BSPC  &mt RCTRL INS   &mt RSHFT DEL
             >;
         };
 
         layer1 {
-            label = "NUMBER_FN";
+            label = "NUMBER&SYMBOL";
             bindings = <
-&kp N1         &kp N2         &kp N3   &kp N4  &kp N5    &kp N6  &kp N7   &kp N8         &kp N9         &kp N0
-&kp F1         &kp F2         &kp F3   &kp F4  &kp F5    &kp LEFT &kp DOWN &kp UP        &kp RIGHT      &trans
-&kp F6         &kp F7         &kp F8   &kp F9  &kp F10   &trans  &trans   &trans         &trans         &kp CARET
-&mt LSHFT F11  &mt LCTRL F12  &kp LALT &trans  &trans    &trans  &kp LALT &mt LCTRL LBKT &mt LSHFT RBKT &trans
+&kp N1     &kp N2     &kp N3   &kp N4  &kp N5    &kp N6  &kp N7   &kp N8       &kp N9        &kp N0
+&kp F1     &kp F2     &kp F3   &kp F4  &kp F5    &kp LEFT &kp DOWN &kp UP      &kp RIGHT     &kp BSLH
+&kp F6     &kp F7     &kp F8   &kp F9  &kp F10   &trans  &trans   &kp SEMI     &kp APOS      &kp CARET
+&kp LSHFT  &kp LCTRL  &kp LALT &trans  &trans    &trans  &trans   &kp RALT     &mt RCTRL LBKT &mt RSHFT RBKT
             >;
         };
 
         layer2 {
-            label = "SYMBOL";
+            label = "SHIFT_NUMBER&SYMBOL";
             bindings = <
-&kp LS(N1)  &kp LS(N2)  &kp LS(N3)     &kp LS(N4)     &kp LS(N5)         &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(MINUS)
-&trans      &trans      &trans         &trans         &bt BT_CLR         &kp HOME    &kp END     &kp PG_UP   &kp PG_DN   &trans
-&kp C_BRI_DN &kp C_BRI_UP &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2       &kp PSCRN   &kp PLUS    &kp ASTRK   &kp TILDE   &trans
-&kp LSHFT   &kp LCTRL   &kp LALT       &trans         &bt BT_CLR_ALL     &trans      &kp LALT    &kp LCTRL   &kp LSHFT   &trans
+&kp LS(N1)   &kp LS(N2)  &kp LS(N3)   &kp LS(N4)  &kp LS(N5)     &kp LS(N6)  &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(MINUS)
+&kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &bt BT_CLR &bt BT_CLR_ALL &kp HOME    &kp END    &kp PG_UP  &kp PG_DN  &kp PIPE
+&kp C_BRI_UP &kp C_BRI_DN &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans      &kp PSCRN  &kp PLUS   &kp ASTRK  &kp TILDE
+&kp LSHFT    &kp LCTRL   &kp LALT     &trans      &trans         &trans      &trans     &kp RALT   &mt RCTRL LBRC &mt RSHFT RBRC
             >;
         };
 
         layer3 {
-            label = "MOUSE";
+            label = "AUTO_MOUSE";
             bindings = <
-&trans     &trans  &trans    &trans    &trans  &trans  &mkp MB1  &mkp MB2  &trans    &trans
-&trans     &trans  &trans    &trans    &trans  &trans  &mkp MB4  &mkp MB3  &mkp MB5  &trans
-&trans     &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans
-&kp LSHFT  &trans  &kp LCMD  &kp LALT  &to 0   &trans  &trans    &trans    &to 0     &kp RALT
+&trans     &trans     &trans   &trans  &trans  &trans  &mkp MB1  &mkp MB2  &trans    &trans
+&trans     &trans     &trans   &trans  &trans  &trans  &mkp MB4  &mkp MB3  &mkp MB5  &trans
+&trans     &trans     &trans   &trans  &trans  &trans  &trans    &trans    &trans    &trans
+&kp LSHFT  &kp LCTRL  &kp LALT &trans  &trans  &trans  &trans    &kp RALT  &kp RCTRL &kp RSHFT
             >;
         };
     };
