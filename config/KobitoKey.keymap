@@ -32,15 +32,15 @@
             bindings = <
 &kp N1     &kp N2     &kp N3   &kp N4  &kp N5    &kp N6  &kp N7   &kp N8       &kp N9        &kp N0
 &kp F1     &kp F2     &kp F3   &kp F4  &kp F5    &kp LEFT &kp DOWN &kp UP      &kp RIGHT     &kp BSLH
-&kp F6     &kp F7     &kp F8   &kp F9  &kp F10   &trans  &trans   &kp SEMI     &kp APOS      &kp CARET
-&kp LSHFT  &kp LCTRL  &kp LALT &trans  &trans    &trans  &trans   &kp RALT     &mt RCTRL LBKT &mt RSHFT RBKT
+&kp F6     &kp F7     &kp F8   &kp F9  &kp F10   &trans  &trans   &kp APOS     &kp SEMI      &kp CARET
+&mt LSHFT F11  &mt LCTRL F12  &kp LALT &trans  &trans    &trans  &trans   &kp RALT     &mt RCTRL LBKT &mt RSHFT RBKT
             >;
         };
 
         layer2 {
             label = "SHIFT_NUMBER&SYMBOL";
             bindings = <
-&kp LS(N1)   &kp LS(N2)  &kp LS(N3)   &kp LS(N4)  &kp LS(N5)     &kp LS(N6)  &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(MINUS)
+&kp LS(N1)   &kp LS(N2)  &kp LS(N3)   &kp LS(N4)  &kp LS(N5)     &kp LS(N6)  &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(INT1)
 &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &bt BT_CLR &bt BT_CLR_ALL &kp HOME    &kp END    &kp PG_UP  &kp PG_DN  &kp PIPE
 &kp C_BRI_UP &kp C_BRI_DN &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans      &kp PSCRN  &kp PLUS   &kp ASTRK  &kp TILDE
 &kp LSHFT    &kp LCTRL   &kp LALT     &trans      &trans         &trans      &trans     &kp RALT   &mt RCTRL LBRC &mt RSHFT RBRC
@@ -50,8 +50,8 @@
         layer3 {
             label = "AUTO_MOUSE";
             bindings = <
-&trans     &trans     &trans   &trans  &trans  &trans  &mkp MB1  &mkp MB2  &trans    &trans
-&trans     &trans     &trans   &trans  &trans  &trans  &mkp MB4  &mkp MB3  &mkp MB5  &trans
+&trans     &trans     &trans   &trans  &trans  &trans  &mkp MB1     &mkp MB2  &trans    &trans
+&trans     &trans     &trans   &trans  &trans  &trans  &kp LA(LEFT) &mkp MB3  &kp LA(RIGHT)  &trans
 &trans     &trans     &trans   &trans  &trans  &trans  &trans    &trans    &trans    &trans
 &kp LSHFT  &kp LCTRL  &kp LALT &trans  &trans  &trans  &trans    &kp RALT  &kp RCTRL &kp RSHFT
             >;
