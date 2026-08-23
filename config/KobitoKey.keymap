@@ -5,6 +5,20 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    macros {
+        browser_back: browser_back {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp LEFT>, <&macro_release &kp LALT>;
+        };
+
+        browser_forward: browser_forward {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp RIGHT>, <&macro_release &kp LALT>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -31,8 +45,8 @@
             label = "NUMBER&SYMBOL";
             bindings = <
 &kp N1     &kp N2     &kp N3   &kp N4  &kp N5    &kp N6  &kp N7   &kp N8       &kp N9        &kp N0
-&kp F1     &kp F2     &kp F3   &kp F4  &kp F5    &kp LEFT &kp DOWN &kp UP      &kp RIGHT     &kp BSLH
-&kp F6     &kp F7     &kp F8   &kp F9  &kp F10   &trans  &trans   &kp APOS     &kp SEMI      &kp CARET
+&kp F1     &kp F2     &kp F3   &kp F4  &kp F5    &kp LEFT &kp DOWN &kp UP      &kp RIGHT     &kp INT1
+&kp F6     &kp F7     &kp F8   &kp F9  &kp F10   &trans  &trans   &kp SEMI     &kp APOS      &kp EQUAL
 &mt LSHFT F11  &mt LCTRL F12  &kp LALT &trans  &trans    &trans  &trans   &kp RALT     &mt RCTRL RBKT &mt RSHFT BSLH
             >;
         };
@@ -41,8 +55,8 @@
             label = "SHIFT_NUMBER&SYMBOL";
             bindings = <
 &kp LS(N1)   &kp LS(N2)  &kp LS(N3)   &kp LS(N4)  &kp LS(N5)     &kp LS(N6)  &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(INT1)
-&kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &bt BT_CLR &bt BT_CLR_ALL &kp HOME    &kp END    &kp PG_UP  &kp PG_DN  &kp PIPE
-&kp C_BRI_UP &kp C_BRI_DN &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans      &kp PSCRN  &kp ASTRK  &kp PLUS   &kp TILDE
+&kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &bt BT_CLR &bt BT_CLR_ALL &kp HOME    &kp END    &kp PG_UP  &kp PG_DN  &kp LS(INT3)
+&kp C_BRI_UP &kp C_BRI_DN &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans      &kp PSCRN  &kp LS(SEMI) &kp LS(APOS) &kp LS(EQUAL)
 &kp LSHFT    &kp LCTRL   &kp LALT     &trans      &trans         &trans      &trans     &kp RALT   &mt RCTRL LS(RBKT) &mt RSHFT LS(BSLH)
             >;
         };
@@ -50,8 +64,8 @@
         layer3 {
             label = "AUTO_MOUSE";
             bindings = <
-&trans     &trans     &trans   &trans  &trans  &trans  &mkp MB1     &mkp MB2  &trans    &trans
-&trans     &trans     &trans   &trans  &trans  &trans  &kp LA(LEFT) &mkp MB3  &kp LA(RIGHT) &trans
+&trans     &trans     &trans   &trans  &trans  &trans  &mkp MB1        &mkp MB2  &trans    &trans
+&trans     &trans     &trans   &trans  &trans  &trans  &browser_back   &mkp MB3  &browser_forward &trans
 &trans     &trans     &trans   &trans  &trans  &trans  &trans    &trans    &trans    &trans
 &kp LSHFT  &kp LCTRL  &kp LALT &trans  &trans  &trans  &trans    &kp RALT  &kp RCTRL &kp RSHFT
             >;
