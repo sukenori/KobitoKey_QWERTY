@@ -5,6 +5,121 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    behaviors {
+        ms_n1: mod_morph_n1 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N1)>, <&kp N1>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ms_n2: mod_morph_n2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N2)>, <&kp N2>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ms_n3: mod_morph_n3 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N3)>, <&kp N3>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ms_n4: mod_morph_n4 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N4)>, <&kp N4>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ms_n5: mod_morph_n5 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N5)>, <&kp N5>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ms_n6: mod_morph_n6 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N6)>, <&kp N6>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ms_n7: mod_morph_n7 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N7)>, <&kp N7>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ms_n8: mod_morph_n8 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N8)>, <&kp N8>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ms_n9: mod_morph_n9 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N9)>, <&kp N9>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ms_int1: mod_morph_int1 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(INT1)>, <&kp INT1>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ms_int3: mod_morph_int3 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(INT3)>, <&kp INT3>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ms_semi: mod_morph_semi {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(SEMI)>, <&kp SEMI>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ms_apos: mod_morph_apos {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(APOS)>, <&kp APOS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ms_equal: mod_morph_equal {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(EQUAL)>, <&kp EQUAL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ms_rbkt: mod_morph_rbkt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(RBKT)>, <&kp RBKT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ms_bslh: mod_morph_bslh {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(BSLH)>, <&kp BSLH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+    };
+
     macros {
         browser_back: browser_back {
             compatible = "zmk,behavior-macro";
@@ -45,7 +160,7 @@
             label = "NUMBER&SYMBOL";
             bindings = <
 &kp N1     &kp N2     &kp N3   &kp N4  &kp N5    &kp N6  &kp N7   &kp N8       &kp N9        &kp N0
-&kp F1     &kp F2     &kp F3   &kp F4  &kp F5    &kp LEFT &kp DOWN &kp UP      &kp RIGHT     &kp INT1
+&kp F1     &kp F2     &kp F3   &kp F4  &kp F5    &kp LEFT &kp DOWN &kp UP      &kp RIGHT     &kp INT3
 &kp F6     &kp F7     &kp F8   &kp F9  &kp F10   &trans  &trans   &kp SEMI     &kp APOS      &kp EQUAL
 &mt LSHFT F11  &mt LCTRL F12  &kp LALT &trans  &trans    &trans  &trans   &kp RALT     &mt RCTRL RBKT &mt RSHFT BSLH
             >;
@@ -54,10 +169,10 @@
         layer2 {
             label = "SHIFT_NUMBER&SYMBOL";
             bindings = <
-&kp LS(N1)   &kp LS(N2)  &kp LS(N3)   &kp LS(N4)  &kp LS(N5)     &kp LS(N6)  &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(INT1)
-&kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &bt BT_CLR &bt BT_CLR_ALL &kp HOME    &kp END    &kp PG_UP  &kp PG_DN  &kp LS(INT3)
-&kp C_BRI_UP &kp C_BRI_DN &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans      &kp PSCRN  &kp LS(SEMI) &kp LS(APOS) &kp LS(EQUAL)
-&kp LSHFT    &kp LCTRL   &kp LALT     &trans      &trans         &trans      &trans     &kp RALT   &mt RCTRL LS(RBKT) &mt RSHFT LS(BSLH)
+&ms_n1   &ms_n2  &ms_n3   &ms_n4  &ms_n5     &ms_n6  &ms_n7 &ms_n8 &ms_n9 &ms_int1
+&kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &bt BT_CLR &bt BT_CLR_ALL &kp HOME    &kp END    &kp PG_UP  &kp PG_DN  &ms_int3
+&kp C_BRI_UP &kp C_BRI_DN &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans      &kp PSCRN  &ms_semi &ms_apos &ms_equal
+&kp LSHFT    &kp LCTRL   &kp LALT     &trans      &trans         &trans      &trans     &kp RALT   &mt RCTRL ms_rbkt &mt RSHFT ms_bslh
             >;
         };
 
