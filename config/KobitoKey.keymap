@@ -120,13 +120,17 @@
 
     };
 
-    combos {
-        compatible = "zmk,combos";
+    macros {
+        browser_back: browser_back {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp LEFT>, <&macro_release &kp LALT>;
+        };
 
-        combo_eisu {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp LANG2>;
+        browser_forward: browser_forward {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp RIGHT>, <&macro_release &kp LALT>;
         };
     };
 
