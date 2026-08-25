@@ -172,7 +172,7 @@
 &trans     &trans     &trans   &trans  &trans  &trans  &mkp MB1     &mkp MB2  &trans    &trans
 &trans     &trans     &trans   &trans  &trans  &trans  &kp LA(LEFT) &mkp MB3  &kp LA(RIGHT) &trans
 &trans     &trans     &trans   &trans  &trans  &trans  &trans    &trans    &trans    &trans
-&kp LSHFT  &kp LCTRL  &kp LALT &trans  &trans  &trans  &trans    &kp RALT  &kp RCTRL &kp RSHFT
+&kp LSHFT  &kp LCTRL  &kp LALT  &to 0  &to 0  &to 0  &to 0  &kp RALT  &kp RCTRL  &kp RSHFT
             >;
         };
     };
