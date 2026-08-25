@@ -120,20 +120,6 @@
 
     };
 
-    macros {
-        browser_back: browser_back {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp LEFT>, <&macro_release &kp LALT>;
-        };
-
-        browser_forward: browser_forward {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp RIGHT>, <&macro_release &kp LALT>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -170,7 +156,7 @@
             label = "AUTO_MOUSE";
             bindings = <
 &trans     &trans     &trans   &trans  &trans  &trans  &mkp MB1     &mkp MB2  &trans    &trans
-&trans     &trans     &trans   &trans  &trans  &trans  &kp LA(LEFT) &mkp MB3  &kp LA(RIGHT) &trans
+&trans     &trans     &trans   &trans  &trans  &trans  &mkp MB4  &mkp MB3  &mkp MB5  &trans
 &trans     &trans     &trans   &trans  &trans  &trans  &trans    &trans    &trans    &trans
 &kp LSHFT  &kp LCTRL  &kp LALT  &to 0  &to 0  &to 0  &to 0  &kp RALT  &kp RCTRL  &kp RSHFT
             >;
