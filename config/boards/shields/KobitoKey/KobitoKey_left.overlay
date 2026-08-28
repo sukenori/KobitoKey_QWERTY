@@ -65,7 +65,9 @@
         compatible = "zmk,input-processor-roba-scroll";
         #input-processor-cells = <0>;
         axis-mode = <0>;
-        snap-x-ratio = <5 8>;
+        snap-x-ratio = <5 6>;
+        snap-lock-ms = <80>;
+        snap-lock-events = <2>;
         snap-y-ratio = <1 1>;
         axis = <0>;
         invert-y;
