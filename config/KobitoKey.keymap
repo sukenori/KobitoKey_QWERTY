@@ -146,7 +146,7 @@
             label = "SHIFT_NUMBER&SYMBOL";
             bindings = <
 &ms_n1       &ms_n2       &ms_n3       &ms_n4     &ms_n5         &ms_n6      &ms_n7     &ms_n8     &ms_n9     &ms_int1
-&kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &bt BT_CLR &bt BT_CLR_ALL &kp HOME    &kp END    &kp PG_UP  &kp PG_DN  &ms_int3
+&kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &bt BT_CLR &bt BT_CLR_ALL &kp HOME    &kp PG_DN  &kp PG_UP  &kp END  &ms_int3
 &kp C_BRI_DN &kp C_BRI_UP &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans      &kp PSCRN  &ms_semi   &ms_apos   &ms_equal
 &kp LSHFT    &kp LCTRL    &kp LALT     &trans      &trans         &trans      &trans     &kp RALT   &ms_rbkt   &ms_bslh
             >;
